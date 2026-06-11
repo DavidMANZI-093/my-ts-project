@@ -15,6 +15,10 @@ app.use(cors({
   credentials: true,
 }));
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the home route!');
+});
+
 // Mount user routes at /users
 app.use('/users', userRoutes);
 
